@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2ff;
+  text-align: center;
+  padding-top: 60px;
+}
+
+h1 {
+  color: #4338ca;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 0;    /* Left-aligned */
+  margin-right: auto; /* Optional */
+  border: 3px solid #4338ca;  /* Border around the image */
+  border-radius: 8px;         /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect */
+}
