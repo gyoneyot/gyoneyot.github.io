@@ -51,33 +51,74 @@ h1 {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  text-align: left; /* improves readability for lists */
 }
 
 .event-history h2 {
   color: #4338ca;
   margin: 0 0 12px;
   font-size: 20px;
+  text-align: center;
 }
 
-.event-history ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* --- Collapsible year "cards" (details/summary) --- */
+.year-block {
+  margin: 14px 0; /* spacing between years */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-.event-history li {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid #eef2ff;
-  font-size: 16px;
+.year-block summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  font-weight: 800;
+  color: #4338ca;
+  list-style: none; /* removes default marker in Firefox */
 }
 
-.event-history li:last-child {
-  border-bottom: none;
+.year-block summary::-webkit-details-marker {
+  display: none; /* hides default triangle in Chrome/Safari */
 }
 
+/* Custom arrow */
+.year-block summary::after {
+  content: "▾";
+  float: right;
+  opacity: 0.7;
+}
+
+.year-block[open] summary::after {
+  content: "▴";
+}
+
+/* List spacing inside each year */
+.year-block ul {
+  list-style: disc;
+  margin: 8px 0 14px;
+  padding: 0 18px 0 34px; /* left indent for bullets */
+}
+
+.year-block li {
+  margin: 8px 0;      /* space between items */
+  line-height: 1.4;
+  border: none;       /* override old li border */
+  padding: 0;         /* override old li padding */
+  display: list-item; /* ensure normal list behavior */
+}
+
+/* Small open animation */
+.year-block[open] ul {
+  animation: reveal 160ms ease-out;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Legacy classes (safe to keep even if unused now) */
 .event {
   font-weight: 600;
   text-align: left;
@@ -95,5 +136,17 @@ h1 {
   }
   h1 {
     font-size: 24px;
+  }
+
+  .year-block summary {
+    padding: 12px;
+  }
+
+  .year-block ul {
+    padding-left: 30px;
+  }
+
+  .year-block li {
+    margin: 6px 0;
   }
 }
