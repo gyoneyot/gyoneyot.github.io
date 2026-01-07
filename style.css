@@ -65,25 +65,18 @@ h1 {
 
 .event-history h2 {
   color: var(--accent);
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   font-size: 20px;
   text-align: center;
 }
 
-.section-subtitle {
-  margin: 0 0 14px;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 14px;
-}
-
-/* Current Arc card */
+/* Current Arc (simple, no bullets) */
 .current-arc {
-  margin: 10px 0 18px;
+  margin: 8px 0 18px;
   padding: 12px 14px;
-  border: 2px solid rgba(70, 194, 165, 0.25);
+  border: 2px solid rgba(70, 194, 165, 0.22);
   border-radius: 12px;
-  background: rgba(70, 194, 165, 0.06);
+  background: rgba(70, 194, 165, 0.05);
 }
 
 .current-arc h3 {
@@ -93,18 +86,9 @@ h1 {
 }
 
 .current-arc-subtitle {
-  margin: 0 0 10px;
+  margin: 0;
   opacity: 0.85;
   font-size: 14px;
-}
-
-.current-arc-list {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.current-arc-list li {
-  margin: 6px 0;
   line-height: 1.4;
 }
 
@@ -132,7 +116,7 @@ h1 {
   display: none;
 }
 
-/* Year title + subtitle */
+/* Year title + subtitle (optional, keep subtle) */
 .year-title {
   font-weight: 800;
 }
@@ -140,8 +124,8 @@ h1 {
 .year-subtitle {
   margin-left: auto;
   font-weight: 600;
-  opacity: 0.75;
-  font-size: 14px;
+  opacity: 0.60;
+  font-size: 13px;
 }
 
 /* Arrow */
@@ -194,6 +178,6 @@ h1 {
   .year-subtitle {
     margin-left: 0;
     width: 100%;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
