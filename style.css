@@ -1,3 +1,7 @@
+:root {
+  --accent: #46c2a5;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #eef2ff;
