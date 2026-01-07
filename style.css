@@ -1,15 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   background: #eef2ff;
-  text-align: center;
-  padding-top: 60px;
   margin: 0;
+  text-align: center;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 16px 60px;
+  padding: 48px 16px 64px;
 }
 
 h1 {
@@ -17,19 +16,18 @@ h1 {
   margin: 0 0 18px;
 }
 
-/* Image styling */
+/* Image: mobile-first (big on phone, capped on desktop) */
 .featured-image {
-  width: 100%;
-  max-width: 420px; /* makes it smaller */
+  width: min(92vw, 480px);
   height: auto;
-  margin: 20px auto 0;
-  display: block; /* centers via auto margins */
+  margin: 18px auto 0;
+  display: block;
   border: 3px solid #4338ca;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-/* Booking text */
+/* Booking */
 .booking {
   margin: 18px 0 0;
   font-size: 16px;
@@ -37,7 +35,7 @@ h1 {
 
 .booking a {
   color: #4338ca;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -45,21 +43,20 @@ h1 {
   text-decoration: underline;
 }
 
-/* Convention history section */
+/* Convention section */
 .convention-history {
-  margin: 40px auto 0;
-  max-width: 520px;
-  padding: 18px 18px 14px;
+  width: min(92vw, 560px);
+  margin: 32px auto 0;
+  padding: 16px;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  text-align: left; /* makes the list easier to read */
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 }
 
 .convention-history h2 {
   color: #4338ca;
   margin: 0 0 12px;
-  text-align: center;
+  font-size: 20px;
 }
 
 .convention-history ul {
@@ -69,10 +66,34 @@ h1 {
 }
 
 .convention-history li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid #eef2ff;
+  font-size: 16px;
 }
 
 .convention-history li:last-child {
   border-bottom: none;
+}
+
+.event {
+  font-weight: 600;
+  text-align: left;
+}
+
+.year {
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* Small screens: slightly tighter spacing */
+@media (max-width: 420px) {
+  .container {
+    padding-top: 36px;
+  }
+  h1 {
+    font-size: 24px;
+  }
 }
